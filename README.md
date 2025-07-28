@@ -29,7 +29,7 @@ This architecture uses:
 - ✅ Amazon S3 (MP3 file cache + lifecycle policy)
 - ✅ Amazon SNS (notification on audio generation)
 
-![Architecture Diagram](architecture/00-tts-architecture-diagram.png)
+![Architecture Diagram](Screenshots/00-tts-architecture-diagram.png)
 
 ---
 
