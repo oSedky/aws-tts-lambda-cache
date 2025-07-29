@@ -62,6 +62,18 @@ Converting text to voice dynamically is costly if done repeatedly. This project:
 - SNS notification publishes on successful generation
 - Pre-signed URLs returned via API Gateway to the frontend
 
+## 🧠 Lambda Logic Overview
+
+This function powers the serverless TTS API. Key features:
+
+- ✅ Caching: SHA-256 hash of input text + voice creates unique cache key
+- ✅ Storage: MP3s stored in S3, organized by voice, lifecycle managed
+- ✅ Cost Control: Repeats skip synthesis and reuse pre-signed S3 link
+- ✅ Observability: SNS publishes events on new synthesis
+- ✅ Security: No secrets, no hardcoded credentials, and CORS-scoped
+
+➡ View full source: [lambda_function.py](lambda_function.py)
+
 ---
 
 ## 💼 Business Impact
